@@ -25,7 +25,8 @@ export default function App() {
       <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
       {/* Step 2: Add event handler to the checkbox and associate styles based on the theme */}
       <input type="checkbox" id="switch" onChange={toggleTheme} />
-      <label htmlFor="switch" className="label">
+      {/* Step 2: Add the id "light" to the div when theme is light and "dark" when theme is dark */}
+      <label htmlFor="switch" className={`label ${theme === "light" ? "light" : "dark"}`}>
         Toggle
       </label>
     </div>
